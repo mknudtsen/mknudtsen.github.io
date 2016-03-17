@@ -1,15 +1,40 @@
-# Site settings
-title: Mark Knudtsen
-email: mark.knudtsen@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://mknudtsen.github.io" # the base hostname & protocol for your site
-twitter_username: mpknudtsen
-github_username:  mknudtsen
-permalink: /:year/:month/:title.html
+# Dependencies
+markdown:         kramdown
 
-# Build settings
-markdown: kramdown
+# Permalinks
+permalink: /:year/:month/:day/:title.html
+# relative_permalinks: true
+
+# Setup
+title:            Mark Knudtsen
+tagline:          ''
+description:      'A collection of my recent work with data vizualization in R, and a few personal projects'
+baseurl: "" # If you are making a gh-pages project blog, this is
+                        # the name of your project repo, preceded by a /'
+                        # Set it to just "/" if you are making a user page.
+                        
+                        # That trailing slash is important for proper storage
+                        # of figures gnerated from knitting.
+baseurlknitr:  "/" # This will always be your baseurl plus an extra '/'
+                                # at the end.  It's used only when knitr renders
+                                # your R Markdown files.
+                        
+url: "https://mknudtsen.github.io" # the base hostname & protocol for your site
+
+# set limit on number of post to appear on Home page
+homepostlimit: 6
+
+# Disqus comments:
+disqus:           false
+shortname:        nothing
+
+# Social Media
+twitter:          false # add a twitter button to each post
+facebook:         false # add a facebook share button to each post
+
+author:
+  name:           'Mark Knudtsen'
+  url:            https://statistics.rainandrhino.org
+
+github:
+  repo:           https://github.com/homerhanumat/knitr-lanyon
